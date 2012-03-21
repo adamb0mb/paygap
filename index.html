@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gender Pay Gap Explorer from PayScale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Gender Pay Gap using a tool and data provided by PayScale, Inc., payscale.com">
+    <meta name="author" content="PayScale, Inc.">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/paygap.css" rel="stylesheet" />
+    <!-- Le fav and touch icons -->
+    <!-- link rel="shortcut icon" href="./assets/ico/favicon.ico">
+    <!-- link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png" -->
+    <!-- link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png" -->
+    <!-- link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png" -->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">PayGap Explorer</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+           </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="loading_page">
+        Loading...
+    </div>
+    <div class="container-fluid" id="content" style="display:none;">
+        <div class="row-fluid visible-desktop" style="padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */">
+            <div class="span12">&nbsp;</div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span4">&nbsp;</div> <!-- spacing -->
+            <div class="span4">
+                <select id="chartDataSelect">
+                    <!-- this gets filled in with options -->
+                </select>
+            </div>
+            <div class="span4">&nbsp;</div> <!-- spacing -->
+        </div>
+
+        <!-- Country Page (default) -->
+        <div class="row-fluid" id="country_page">
+            <div id="chart_div" class="span12"></div>
+        </div>
+
+        <!-- Job Page -->
+        <div id="job_page">
+
+            <!-- Uncontrolled Salary Section -->
+            <div class="row-fluid sectionTitle">Uncontrolled Salary</div>
+            <div class="row-fluid">
+                <div id="job_chart_div" class="span6">
+                    <!-- this gets filled in with a chart -->
+                </div>
+                <div id="job_chart_text_div" class="span6">
+                    <!-- this gets filled in later -->
+                </div>
+            </div>
+            <div class="row-fluid">&nbsp;</div>
+
+            <!-- Controlled Salary Section -->
+            <div class="row-fluid sectionTitle">Controlled Salary</div>
+            <div class="row-fluid">
+                <div id="job_chart2_div" class="span6">
+                    <!-- this gets filled in with a chart -->
+                </div>
+                <div id="job_chart2_text_div" class="span6">
+                    <!-- this gets filled in later -->
+                </div>
+            </div>
+            <div class="row-fluid">&nbsp;</div>
+
+            <!-- Gender Distribution Section -->
+            <div class="row-fluid sectionTitle">Distribution of Male vs Female</div>
+            <div class="row-fluid">
+                <div id="job_chart_pie_div" class="span6">
+                    <!-- this gets filled in with a chart -->
+                </div>
+                <div id="job_chart_pie_text_div" class="span6">
+                    <!-- this gets filled in later -->&nbsp;
+                </div>
+            </div>
+            <div class="row-fluid">&nbsp;</div>
+
+
+            <!-- Why different? section -->
+            <div class="row-fluid sectionTitle">The Gender Pay Gap</div>
+            <div class="row-fluid">
+                The national median salary for men in any job is $50,254 and for women it is $41,474. That's a difference of $8,870 per year! (17.5% lower) (<a href="http://www.eeoc.gov/eeoc/statistics/employment/jobpat-eeo4/2009/table1/table1.html" target="_blank">reference</a>).
+                <br /><br />
+                The "controlled" salaries are a true apples-to-apples comparison (or as close as techincally possible), and the pay gap is much smaller in each individual job.
+                So, what is the difference? There are more men in higher paying jobs (engineering, etc) and there are more women in lower paying jobs (office assistant, etc).
+                <br /><br />
+                "Uncontrolled" and "controlled" salaries can be so different, why? Typically this happens because the men in that job have more years experience than women (or vice versa).
+            </div>
+            <!-- TEMPLATES! -->
+            <!-- This section is hidden from display, but is the text that gets processed into the page -->
+            <div class="templates" style="display:none;">
+                <div id="job_chart_text_div_template" class="span6">
+                    <div class="row-fluid">&nbsp;</div>
+                    <div class="row-fluid">
+                        This is the "uncontrolled" median salary for #jobtitle#s. The uncontrolled median salary is computed by finding any man and any women who work as a #jobtitle# in the US, regardless of education level, years of experience, location, or anything else.
+                    </div>
+                    <div class="row-fluid">&nbsp</div>
+                    <div class="row-fluid">When salaries for #jobtitle#s is uncontrolled, #uc_gender_paid_more# make #uc_percent_better#% more than #uc_gender_paid_less#.</div>
+                </div>
+                <div id="job_chart2_text_div_template" class="span6">
+                    <div class="row-fluid">&nbsp;</div>
+                    This is the "controlled" median salary for #jobtitle#s. This is the roughly how we compute it: (1) for each woman in our data, we find a man with a similar education, location, experience level, etc; (2) the woman goes in to the "controlled" female group and the man goes into the "controlled" male group; (3) then we compute the median salary of these two groups.
+                    <div class="row-fluid">&nbsp</div>
+                    <div class="row-fluid">When salaries for #jobtitle#s is controlled, #c_gender_paid_more# make #c_percent_better#% more than #c_gender_paid_less#.</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/history.js/1.7.1/bundled/html4+html5/jquery.history.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="./assets/js/paygap.js"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages:["corechart"] });
+        google.setOnLoadCallback(loadCountryData);
+        var chart, countryData, History;
+
+        $(document).ready(function () {
+            $('#loading_page').hide();
+            $('#content').show();
+            // attach the listener to the dropdown
+            $('#chartDataSelect').change(jobDropdownHandler);
+            init();
+        });
+    </script>
+
+  </body>
+</html>

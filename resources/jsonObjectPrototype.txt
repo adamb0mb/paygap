@@ -1,0 +1,8 @@
+{ "title": "Some Job",
+  "columns": [{"label": "Gender",type:"string"},
+			  {"label": "Controlled National Median TCC", "type": "number"},
+			  {"label": "Uncontrolled National Median TCC", "type": "number"}, 
+			  {"label": "Count", "type": "number"}],
+  "rows": [["male",10000,15000, 1000],
+		   ["female",9000,14999, 10]]
+}

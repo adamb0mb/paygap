@@ -1,0 +1,952 @@
+[
+   [
+      {
+         "title":"Pharmacy Tech",
+	 "answervalue":"Pharmacy Technician",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               25400,
+               25300,
+               539
+            ],
+            [
+               "female",
+               25300,
+               25300,
+               2079
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Tax Preparer",
+	 "answervalue":"Tax Preparer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               27800,
+               29900,
+               69
+            ],
+            [
+               "female",
+               29900,
+               29900,
+               131
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Admin Assistant",
+	 "answervalue":"Administrative Assistant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               30900,
+               30700,
+               539
+            ],
+            [
+               "female",
+               31600,
+               31600,
+               9151
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Legal Assistant",
+	 "answervalue":"Legal Assistant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               32600,
+               31300,
+               111
+            ],
+            [
+               "female",
+               34500,
+               34500,
+               960
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Office Manager",
+	 "answervalue":"Office Manager",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               38600,
+               39200,
+               938
+            ],
+            [
+               "female",
+               36500,
+               36500,
+               8954
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"HR Admin",
+	 "answervalue":"Human Resources Administrator",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               39900,
+               40100,
+               127
+            ],
+            [
+               "female",
+               39600,
+               39600,
+               1283
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"High School Teacher",
+	 "answervalue":"High School Teacher",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               45200,
+               45200,
+               1084
+            ],
+            [
+               "female",
+               43400,
+               43400,
+               1413
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Police Officer",
+	 "answervalue":"Police Officer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               43400,
+               46900,
+               443
+            ],
+            [
+               "female",
+               42700,
+               42700,
+               47
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Technical Writer",
+	 "answervalue":"Technical Writer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               52300,
+               51400,
+               258
+            ],
+            [
+               "female",
+               51800,
+               51800,
+               339
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"PM, Marketing",
+	 "answervalue":"Project Manager, Marketing",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               52200,
+               55000,
+               131
+            ],
+            [
+               "female",
+               49200,
+               49200,
+               327
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"RN",
+	 "answervalue":"Registered Nurse",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               56800,
+               56900,
+               1157
+            ],
+            [
+               "female",
+               55600,
+               55600,
+               8764
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Maintenance Manager",
+	 "answervalue":"Maintenance Manager",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               54800,
+               59600,
+               931
+            ],
+            [
+               "female",
+               49100,
+               49100,
+               52
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Environmental Engineer",
+	 "answervalue":"Environmental Engineer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               58500,
+               61100,
+               211
+            ],
+            [
+               "female",
+               57400,
+               57400,
+               107
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Sr. Tax Accountant",
+	 "answervalue":"Sr. Tax Accountant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               64400,
+               63800,
+               179
+            ],
+            [
+               "female",
+               63500,
+               63500,
+               178
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Software Developer",
+	 "answervalue":"Software Developer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               68300,
+               65600,
+               7207
+            ],
+            [
+               "female",
+               66100,
+               66100,
+               924
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"PM, Construction",
+	 "answervalue":"Project Manager, Construction",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               64100,
+               70400,
+               3017
+            ],
+            [
+               "female",
+               61500,
+               61500,
+               299
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"IT Consultant",
+	 "answervalue":"Information Technology Consultant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               71000,
+               72900,
+               719
+            ],
+            [
+               "female",
+               71500,
+               71500,
+               160
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Financial Controller",
+	 "answervalue":"Financial Controller",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               77500,
+               85800,
+               915
+            ],
+            [
+               "female",
+               71300,
+               71300,
+               1240
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Attorney or Lawyer",
+	 "answervalue":"Attorney or Lawyer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               77800,
+               84400,
+               1268
+            ],
+            [
+               "female",
+               72900,
+               72900,
+               823
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Management Consultant",
+	 "answervalue":"Management Consultant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               78200,
+               85000,
+               722
+            ],
+            [
+               "female",
+               73200,
+               73200,
+               368
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Physician Asst",
+	 "answervalue":"Physician Assistant",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               87000,
+               90000,
+               501
+            ],
+            [
+               "female",
+               82000,
+               82000,
+               978
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Finance Manager",
+	 "answervalue":"Finance Manager",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               78500,
+               93000,
+               379
+            ],
+            [
+               "female",
+               72400,
+               72400,
+               254
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Rgnl Sales Manager",
+	 "answervalue":"Regional Sales Manager",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               79600,
+               93200,
+               1223
+            ],
+            [
+               "female",
+               71600,
+               71600,
+               271
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Sr. Electrical Engineer",
+	 "answervalue":"Sr. Electrical Engineer",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               95700,
+               97300,
+               652
+            ],
+            [
+               "female",
+               93200,
+               93200,
+               24
+            ]
+         ]
+      }
+   ],
+   [
+      {
+         "title":"Sr. Database Admin",
+	 "answervalue":"Sr. Database Administrator",
+         "columns":[
+            {
+               "label":"Gender",
+               "type":"string"
+            },
+            {
+               "label":"Controlled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Uncontrolled National Median TCC",
+               "type":"number"
+            },
+            {
+               "label":"Count",
+               "type":"number"
+            }
+         ],
+         "rows":[
+            [
+               "male",
+               99500,
+               98800,
+               330
+            ],
+            [
+               "female",
+               94700,
+               94700,
+               57
+            ]
+         ]
+      }
+   ]
+]
