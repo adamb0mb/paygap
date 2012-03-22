@@ -157,6 +157,16 @@ function loadDefaultChart() {
     $("#country_page").show();
     $("#job_page").hide();
 
+    // attach event listener
+    google.visualization.events.addListener(chart, 'select', function () {
+        selection = chart.getSelection()[0];
+        row = selection.row;
+        job = countryData[row][0].title;
+        $("#chartDataSelect").val(job).attr("selected", true);
+        updateChart(job);
+    });
+
+
     chartData.addRows(filteredRows);
     chart.draw(chartData, options);
 
@@ -250,7 +260,8 @@ function updateChart(selectedOption) {
                     , minValue: 0
                     , maxValue: max
                 }
-    };
+            };
+
 
     // Adding all the data to the dive
     chart.draw(chartData, options);
