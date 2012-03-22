@@ -11,7 +11,6 @@
     });
 }
 
-
 function buildReportMenu() {
     var options = '';
     for (var i = 0; i < countryData.length; i++) {
@@ -34,76 +33,6 @@ function populateText(divId, values, templateDivId) {
         template = template.replace(new RegExp("#" + value + "#", 'gi'), values[value]);
     }
     $(divId).html(template);
-}
-
-function loadDefaultChart() {
-    // get new data
-    chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    var options = {
-        title: 'National Salaries'
-                    , axisTitlesPosition: "out"
-                    , chartArea: { left: "10%", top: "20%", width: "90%", height: "50%" }
-                    , legend: {
-                        position: "top"
-                    }
-                    , height: 500
-                    , hAxis: {
-                        title: "Jobs, from low- to high- paying"
-                        , textPosition: "out"
-                        //                        , showTextEvery: 1
-                        , slantedText: 1
-                        , maxAlternation: 10
-                    }
-                    , vAxis: {
-                        title: "pay, in US$"
-                        , minValue: 0
-                    }
-    };
-
-    var chartData = new google.visualization.DataTable();
-
-    //add columns
-    chartData.addColumn("string", "Job");
-    chartData.addColumn("number", "Male National Median Uncontrolled Salary");
-    chartData.addColumn("number", "Female National Median Uncontrolled Salary")
-
-    //add rows
-    filteredRows = Array();
-    for (var i = 0; i < countryData.length; i++) {
-        job = countryData[i][0];
-        maleNationalPay = job.rows[0][2];
-        femaleNationalPay = job.rows[1][2];
-        filteredRows.push([job.title, maleNationalPay, femaleNationalPay]);
-    }
-
-    // hide the old data first
-    $("#country_page").show();
-    $("#job_page").hide();
-
-    chartData.addRows(filteredRows);
-    chart.draw(chartData, options);
-
-}
-
-function buildPieChart(jobDataEntry) {
-    var GENDER = 0; COUNT = 3; // array positions
-    var pieData = new google.visualization.DataTable();
-    pieData.addColumn("string","Gender");
-    pieData.addColumn("number","Percentage per Gender");
-    filteredData = Array(), totalCount = 0;
-    for (i in jobDataEntry.rows) {
-        totalCount += jobDataEntry.rows[i][COUNT];
-    }
-    for (i in jobDataEntry.rows) {
-        filteredData.push([jobDataEntry.rows[i][GENDER], jobDataEntry.rows[i][COUNT]/totalCount]);
-    }
-    pieData.addRows(filteredData);
-    options = {
-        //title: 'Gender Distribution'
-        };
-
-    pieChart = new google.visualization.PieChart(document.getElementById('job_chart_pie_div'));
-    pieChart.draw(pieData,options);
 }
 
 function init() {
@@ -157,6 +86,83 @@ function jobDropdownHandler() {
     }
 }
 
+/*
+ * Chart building section
+ */
+
+// pie chart
+function buildPieChart(jobDataEntry) {
+    var GENDER = 0; COUNT = 3; // array positions
+    var pieData = new google.visualization.DataTable();
+    pieData.addColumn("string", "Gender");
+    pieData.addColumn("number", "Percentage per Gender");
+    filteredData = Array(), totalCount = 0;
+    for (i in jobDataEntry.rows) {
+        totalCount += jobDataEntry.rows[i][COUNT];
+    }
+    for (i in jobDataEntry.rows) {
+        filteredData.push([jobDataEntry.rows[i][GENDER], jobDataEntry.rows[i][COUNT] / totalCount]);
+    }
+    pieData.addRows(filteredData);
+    options = {
+    //title: 'Gender Distribution'
+};
+
+pieChart = new google.visualization.PieChart(document.getElementById('job_chart_pie_div'));
+pieChart.draw(pieData, options);
+}
+
+// national chart
+function loadDefaultChart() {
+    // get new data
+    chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    var options = {
+        title: 'National Salaries'
+                    , axisTitlesPosition: "out"
+                    , chartArea: { left: "10%", top: "20%", width: "90%", height: "50%" }
+                    , legend: {
+                        position: "top"
+                    }
+                    , height: 500
+                    , hAxis: {
+                        title: "Jobs, from low- to high- paying"
+                        , textPosition: "out"
+                        //                        , showTextEvery: 1
+                        , slantedText: 1
+                        , maxAlternation: 10
+                    }
+                    , vAxis: {
+                        title: "pay, in US$"
+                        , minValue: 0
+                    }
+    };
+
+    var chartData = new google.visualization.DataTable();
+
+    //add columns
+    chartData.addColumn("string", "Job");
+    chartData.addColumn("number", "Male National Median Uncontrolled Salary");
+    chartData.addColumn("number", "Female National Median Uncontrolled Salary")
+
+    //add rows
+    filteredRows = Array();
+    for (var i = 0; i < countryData.length; i++) {
+        job = countryData[i][0];
+        maleNationalPay = job.rows[0][2];
+        femaleNationalPay = job.rows[1][2];
+        filteredRows.push([job.title, maleNationalPay, femaleNationalPay]);
+    }
+
+    // hide the old data first
+    $("#country_page").show();
+    $("#job_page").hide();
+
+    chartData.addRows(filteredRows);
+    chart.draw(chartData, options);
+
+}
+
+// the column chart 
 function updateChart(selectedOption) {
     // get new data
     chart = new google.visualization.ColumnChart(document.getElementById('job_chart_div'));
