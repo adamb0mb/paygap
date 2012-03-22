@@ -159,10 +159,9 @@ function loadDefaultChart() {
 
     // attach event listener
     google.visualization.events.addListener(chart, 'select', function () {
-        selection = chart.getSelection()[0];
-        row = selection.row;
-        job = countryData[row][0].title;
+        job = countryData[chart.getSelection()[0].row][0].title;
         $("#chartDataSelect").val(job).attr("selected", true);
+        setUrl(job);
         updateChart(job);
     });
 
